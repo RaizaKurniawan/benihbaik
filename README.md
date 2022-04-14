@@ -1,4 +1,4 @@
-# benihbaik
+# benihbaik cypress ui automation
 
 This repo for Cypress 
 1. open terminal 
