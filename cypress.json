@@ -1,1 +1,7 @@
-{}
+{
+    "baseUrl": "https://m.benihbaik.com",
+    "env": {
+      "email": "raiza@benihbaik.com",
+      "password": "IdiomOfSkyliner28"
+    }
+  }
