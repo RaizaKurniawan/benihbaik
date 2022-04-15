@@ -1,4 +1,8 @@
 class Donasi {
+    cookieSet(){
+        cy 
+            .setCookie('auth', 'eyJpdiI6IlVZcE5xQkxoaEp3KzQ0UmJScGxEVXc9PSIsInZhbHVlIjoiOXZFS05XS1BRMUVMU1ArYjlRQkNucFI0eEE5SWNnV0dhTXhqYVVaS0wwZlBjVSs0RE9tays5eXpBRVJOcVFtMSIsIm1hYyI6ImIzNjhlMDA4MzM1ZDk4OGI3NWY0MTE1Y2NmZDUwNjMyOTEzNGI5ZTBjYzM2YzgwYWUyZGRmZjE4ZmI5NDcxNzcifQ%3D%3D')
+    }
     pilihnominal25(pilihnominal) {
         return cy 
             .get(':nth-child(2) > .pr-1 > .card-body > .d-flex > .mb-0').click()
