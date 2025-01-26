@@ -7,6 +7,8 @@ class HomePage {
         return cy 
             .get('.swiper-slide-active > .banner-list > img').click()
     }
+
+    
 }
 
 export default HomePage

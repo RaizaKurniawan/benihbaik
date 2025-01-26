@@ -16,11 +16,13 @@ class LoginPage {
     }
     enterEmail(username) {
         return cy 
-                .get('.m-b-18 > .input100')
+                //.get('.m-b-18 > .input100')
+                .get('[placeholder="Nama Pengguna atau Email Anda"]')
     }
     enterPasword(password) {
         return cy  
-                .get('.m-b-12 > .input100')
+                //.get('.m-b-12 > .input100')
+                .get('[placeholder="Password Anda"]')
     }
     masuk(masuk) {
         return cy

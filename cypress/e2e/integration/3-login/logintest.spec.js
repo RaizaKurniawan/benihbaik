@@ -16,4 +16,6 @@ describe('Generic Test Requiring Log In', () => {
         .contains('Masuk sekarang juga')
         .click()
     })
+
+    
   })
