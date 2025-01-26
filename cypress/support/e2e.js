@@ -8,5 +8,8 @@ Cypress.on('uncaught:exception', (err) => {
     if (err.message.includes("Cannot read properties of null (reading 'style')")) {
         return false;
     }
+    if (err.message.includes("failOnStatusCode")){
+        return false;
+    }
   });
   

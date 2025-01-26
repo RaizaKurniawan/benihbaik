@@ -1,13 +1,14 @@
 import LoginPage from "../login";
+import Footer from "../../2-home/footer";
 
 describe ("Execute TCID MBB-07", function() {
     it ("Login menggunakan Email dan Password yang valid", function() {
         const login = new LoginPage();
         login.navigate();
         login.enterEmail().clear();
-        login.enterEmail().type('raiza@benihbaik.com');
+        login.enterEmail().type('raizakurniawan@gmail.com');
         login.enterPasword().clear();
-        login.enterPasword().type('IdiomOfSkyliner28');
+        login.enterPasword().type('Ejakeren040488');
         login.masuk().click();
 
     })

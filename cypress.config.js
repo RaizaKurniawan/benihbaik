@@ -9,10 +9,10 @@ module.exports = defineConfig({
 
         },
         baseUrl: 'https://m.benihbaik.com',
-            env: {
-                    email: 'raiza@benihbaik.com',
-                    password: 'IdiomOfSkyliner28'
-            },
+        env: {
+                email: 'raiza@benihbaik.com',
+                password: 'IdiomOfSkyliner28'
+        },
         specPattern: 'cypress/e2e/**/*.spec.{js,jsx,ts,tsx}'
     },
 })
