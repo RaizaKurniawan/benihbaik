@@ -1,5 +1,5 @@
 import LoginPage from "../login";
-
+import Footer from "../../2-home/footer";
 
 describe ("Execute TCID MBB-07", function() {
     it ("Login menggunakan Email dan Password yang valid", function() {
@@ -15,5 +15,11 @@ describe ("Execute TCID MBB-07", function() {
         login.enterPasword().type(password);
         login.masuk().click();
 
+        const footer = new Footer();
+        footer.profile();
+        cy
+            .get('#update')
+            .should('have.contain', 'Akun')
+        
     })
 })
