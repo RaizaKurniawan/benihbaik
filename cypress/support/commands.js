@@ -24,7 +24,13 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 // Note that the base_url is set in the ./cypress.json file
-Cypress.Commands.add("login", (email = null, password = null) => {
+
+Cypress.Commands.add('homePage', () => {
+  cy.visit('/')
+})
+
+
+Cypress.Commands.add('login', (email = null, password = null) => {
     email = email || Cypress.env('email')
     password = password || Cypress.env('password')
     let _token
@@ -46,3 +52,5 @@ Cypress.Commands.add("login", (email = null, password = null) => {
         })
       })
   })
+
+ 
