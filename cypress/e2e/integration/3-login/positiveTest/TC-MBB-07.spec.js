@@ -1,5 +1,4 @@
 import LoginPage from "../login";
-import Footer from "../../2-home/footer";
 
 describe ("Execute TCID MBB-07", function() {
     it ("Login menggunakan Email dan Password yang valid", function() {

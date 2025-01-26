@@ -1,9 +1,0 @@
-{
-  "defaultCommandTimeout":30000,
-    "baseUrl": "https://m.benihbaik.com",
-    "env": {
-      "email": "raiza@benihbaik.com",
-      "password": "IdiomOfSkyliner28"
-    }
-    
-  }

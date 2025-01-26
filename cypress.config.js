@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const envConfg = require("./cypress.env")
 
 module.exports = defineConfig({
     viewportHeight: 856,
@@ -10,8 +11,7 @@ module.exports = defineConfig({
         },
         baseUrl: 'https://m.benihbaik.com',
         env: {
-                email: 'raiza@benihbaik.com',
-                password: 'IdiomOfSkyliner28'
+            ...envConfg,
         },
         specPattern: 'cypress/e2e/**/*.spec.{js,jsx,ts,tsx}'
     },

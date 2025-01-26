@@ -30,23 +30,25 @@ Cypress.Commands.add('homePage', () => {
 })
 
 
-Cypress.Commands.add('login', (email = null, password = null) => {
-  cy.session( 
-    [email || Cypress.env('email'), password || Cypress.env('password')],
-    () => {
-      cy.visit('/login')
-      .getCookie('XSRF-TOKEN')
-      .then((cookie) => {
-        cy.request({
-          method: 'POST',
-          url: '/login',
-          failOnStatusCode: false,
-          form: true,
-          body: {
-            email: email || Cypress.env('email'),
-            password: password || Cypress.env('password'),
-          },
-          headers: {
+Cypress.Commands.add('login', () => {
+  const email = Cypress.env('email');
+  const password = Cypress.env('password');
+
+  cy.session([email, password], () => {
+      cy
+        .visit('/login')
+        .getCookie('XSRF-TOKEN')
+        .then((cookie) => {
+          cy.request({
+            method: 'POST',
+            url: '/login',
+            failOnStatusCode: false,
+            form: true,
+            body: {
+              email: email || Cypress.env('email'),
+              password: password || Cypress.env('password'),
+            },
+            headers: {
             // Base64 encoded string was URI encoded in headers. Decode it.
             'X-XSRF-TOKEN': decodeURIComponent(cookie.value)
           },
